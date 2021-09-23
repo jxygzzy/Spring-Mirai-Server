@@ -1,4 +1,4 @@
-package net.lz1998.pbbot.interceptor;
+package net.zzy.pbbot.interceptor;
 
 import lombok.SneakyThrows;
 import net.lz1998.pbbot.handler.BotSessionInterceptor;
@@ -21,8 +21,10 @@ public class MyWsInterceptor extends BotSessionInterceptor {
         if ("123".equals(botId)) {
             System.out.println("机器人账号是123，关闭连接");
             session.close();
-            return false; // 禁止连接
+            // 禁止连接
+            return false;
         }
-        return true; // 正常连接
+        // 正常连接
+        return true;
     }
 }
